@@ -1,10 +1,13 @@
 package factory
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/HiBang15/design-parttern.git/models"
+)
 
 type iSportsFactory interface {
-	makeShoe() IShoes
-	makeShort() IShort
+	makeShoe() models.IsShoes
+	makeShort() models.IShort
 }
 
 func getSportsFactory(brand string) (iSportsFactory, error) {
