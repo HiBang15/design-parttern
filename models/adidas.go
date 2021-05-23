@@ -11,7 +11,7 @@ type AdidasShort struct {
 	Short
 }
 
-func (a *Adidas) makeShoe() IsShoe {
+func (a *Adidas) MakeShoe() IsShoe {
 	return &AdidasShoe{
 		Shoe: Shoe{
 			Logo: "Adidas",
@@ -20,7 +20,7 @@ func (a *Adidas) makeShoe() IsShoe {
 	}
 }
 
-func (a *Adidas) makeShort() IsShoe {
+func (a *Adidas) MakeShort() IsShort {
 	return &AdidasShort{
 		Short: Short{
 			Logo: "Adidas",

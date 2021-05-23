@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="107f5668-2ac4-4275-8a91-94018ccf99da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/adidas.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/nike.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/is_sport_factory.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/is_sport_factory.go" beforeDir="false" afterPath="$PROJECT_DIR$/factory/is_sport_factory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/is_sport_factory.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/adidas.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/adidas.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/is_shoes.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/is_shoe.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/nike.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/nike.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
   <component name="ProjectId" id="1srEq92SS4Mh1PrdyHirMatE9KP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,20 +40,74 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/models" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/factory" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/HiBang15/design-parttern.git" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="design-parttern" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/HiBang15/design-parttern.git" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/HiBang15/design-parttern.git" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2006" height="418" key="GridCell.Tab.0.bottom" timestamp="1621651014094">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.0.bottom/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014094" />
+    <state width="2006" height="418" key="GridCell.Tab.0.center" timestamp="1621651014094">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.0.center/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014094" />
+    <state width="2006" height="418" key="GridCell.Tab.0.left" timestamp="1621651014093">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.0.left/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014093" />
+    <state width="2006" height="418" key="GridCell.Tab.0.right" timestamp="1621651014094">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.0.right/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014094" />
+    <state width="2006" height="418" key="GridCell.Tab.1.bottom" timestamp="1621651014095">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.1.bottom/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014095" />
+    <state width="2006" height="418" key="GridCell.Tab.1.center" timestamp="1621651014094">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.1.center/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014094" />
+    <state width="2006" height="418" key="GridCell.Tab.1.left" timestamp="1621651014094">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.1.left/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014094" />
+    <state width="2006" height="418" key="GridCell.Tab.1.right" timestamp="1621651014095">
+      <screen x="0" y="25" width="2048" height="1214" />
+    </state>
+    <state width="2006" height="418" key="GridCell.Tab.1.right/0.25.2048.1214@0.25.2048.1214" timestamp="1621651014095" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -57,6 +116,11 @@
           <url>file://$PROJECT_DIR$/models/nike.go</url>
           <line>16</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/models/is_sport_factory.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

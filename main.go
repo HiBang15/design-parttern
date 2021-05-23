@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	adidasFactory, _ := GetSportsFactory("adidas")
-	nikeFactory, _ := GetSportsFactory("nike")
+	adidasFactory, _ := models.GetSportsFactory("adidas")
+	nikeFactory, _ := models.GetSportsFactory("nike")
 	nikeShoe := nikeFactory.MakeShoe()
 	nikeShort := nikeFactory.MakeShort()
 	adidasShoe := adidasFactory.MakeShoe()
