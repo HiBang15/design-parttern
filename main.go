@@ -1,106 +1,81 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-//Example Builder factes
+// Example - Builder Parameter
 
-type Person struct {
-	//Personal detail
-	name, address, pin string
-
-	//job details
-	workAddress, company, position string
-	salary                         int
+type email struct {
+	from, to, subject, body string
 }
 
-//PersonBuilder Struct
-type PersonBuilder struct {
-	person *Person
+type action func(builder *EmailBuilder)
+
+//EmailBuilder struct
+type EmailBuilder struct {
+	email email
 }
 
-//PersonAddressBuilder factes of PersonBuilder
-type PersonAddressBuilder struct {
-	PersonBuilder
+func sendEmail(email *email) {
+	// logic to send email
+	fmt.Println("email sent ...")
+	fmt.Printf("To:%s,\nSubject:%s\n%s\nRegards,\n%s\n", email.to, email.subject, email.body, email.from)
 }
 
-//PersonJobBuilder factes of PersonBuilder
-type PersonJobBuilder struct {
-	PersonBuilder
+//SendEmail function is for client to send email
+func SendEmail(action action) {
+	builder := EmailBuilder{}
+	action(&builder)
+	sendEmail(&builder.email)
 }
 
-func NewPersonBuilder() *PersonBuilder {
-	return &PersonBuilder{person: &Person{}}
+//To sets the email's "To" address
+func (eb *EmailBuilder) To(value string) *EmailBuilder {
+	//basic validation
+	if !strings.Contains(value, "@") {
+		panic("Invalid email")
+	}
+	eb.email.to = value
+	return eb
+
 }
 
-//Lives chains to type *PersonBuilder and returns a *PersonAddressBuilder
-func (b *PersonBuilder) Lives() *PersonAddressBuilder {
-	return &PersonAddressBuilder{*b}
+//From sets the email's "From" address
+func (eb *EmailBuilder) From(value string) *EmailBuilder {
+	//basic validation
+	if !strings.Contains(value, "@") {
+		panic("Invalid email")
+	}
+	eb.email.from = value
+	return eb
 }
 
-//Works chains to type *PersonBuilder and returns a *PersonJobBuilder
-func (b *PersonBuilder) Works() *PersonJobBuilder {
-	return &PersonJobBuilder{*b}
+//Body sets the email's "Body"
+func (eb *EmailBuilder) Body(value string) *EmailBuilder {
+	eb.email.body = value
+	return eb
 }
 
-//At adds address to person
-func (a *PersonAddressBuilder) At(address string) *PersonAddressBuilder {
-	a.person.address = address
-	return a
+//Subject sets the email's "Subject"
+func (eb *EmailBuilder) Subject(value string) *EmailBuilder {
+	eb.email.subject = value
+	return eb
 }
 
-//WithPostalCode adds postal code to person
-func (a *PersonAddressBuilder) WithPostalCode(pin string) *PersonAddressBuilder {
-	a.person.pin = pin
-	return a
-}
-
-//As adds position to person
-func (j *PersonJobBuilder) As(position string) *PersonJobBuilder {
-	j.person.position = position
-	return j
-}
-
-//For adds company to person
-func (j *PersonJobBuilder) For(company string) *PersonJobBuilder {
-	j.person.company = company
-	return j
-}
-
-//In adds company address to person
-func (j *PersonJobBuilder) In(companyAddress string) *PersonJobBuilder {
-	j.person.workAddress = companyAddress
-	return j
-}
-
-//WithSalary adds salary to person
-func (j *PersonJobBuilder) WithSalary(salary int) *PersonJobBuilder {
-	j.person.salary = salary
-	return j
-}
-
-//Build builds a person from PersonBuilder
-func (b *PersonBuilder) Build() *Person {
-	return b.person
-}
-
-//RunBuilderFacet example
-func RunBuilderFacet() {
-	pb := NewPersonBuilder()
-	pb.Lives().
-		At("Bangalore").
-		WithPostalCode("560102").
-		Works().
-		As("Software Engineer").
-		For("IBM").
-		In("Bangalore").
-		WithSalary(150000)
-
-	person := pb.Build()
-
-	fmt.Println(person)
+//RunBuilderParameter example
+func RunBuilderParameter() {
+	SendEmail(func(b *EmailBuilder) {
+		b.
+			To("World@gmail.com").
+			From("me@gmail.com").
+			Subject("Hello world").
+			Body("Sample body for a dummy email")
+	})
 }
 
 
 func main() {
-	RunBuilderFacet()
+	RunBuilderParameter()
 }

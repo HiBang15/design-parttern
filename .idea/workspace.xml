@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="107f5668-2ac4-4275-8a91-94018ccf99da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/is_sport_factory.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factory/is_sport_factory.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/adidas.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/adidas.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/is_shoes.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/is_shoe.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/nike.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/nike.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
